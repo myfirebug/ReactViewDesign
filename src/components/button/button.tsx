@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = (props) => {
   const {
     className,
     size = "middle",
-    color = "primary",
+    color = "default",
     fill = "solid",
     block,
     loading,
