@@ -1,0 +1,121 @@
+$btnColors: none, $primary, $success, $warning, $danger;
+$btnNames: "default", "primary", "success", "warning", "danger";
+
+@include b(button) {
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0 12px;
+  transition: all 0.25s ease 0s;
+  overflow: hidden;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: $black;
+    opacity: 0;
+    transition: all 0.25s ease 0s;
+  }
+  &:hover::before {
+    opacity: 0.1;
+  }
+  @include when(disabled) {
+    opacity: 0.4;
+    cursor: no-drop;
+    &::before {
+      opacity: 0 !important;
+    }
+  }
+  @for $i from 1 through length($btnColors) {
+    $name: nth($btnNames, $i);
+    $color: nth($btnColors, $i);
+
+    @include e($name) {
+      @include when(fill-solid) {
+        background: $color;
+        @if $name == "default" {
+          color: $title;
+          border: 1px solid $border;
+        } @else {
+          color: $white;
+        }
+      }
+      @include when(fill-outline) {
+        background: none;
+        border: 1px solid $color;
+        @if $name == "default" {
+          color: $title;
+        } @else {
+          color: $color;
+        }
+      }
+      @include when(fill-none) {
+        background: none;
+        border: none;
+        @if $name == "default" {
+          color: $title;
+        } @else {
+          color: $color;
+        }
+      }
+      @include when(mini) {
+        height: 24px;
+        font-size: 11px;
+        line-height: 24px;
+      }
+      @include when(small) {
+        height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+      }
+      @include when(middle) {
+        height: 40px;
+        font-size: 15px;
+        line-height: 40px;
+      }
+      @include when(large) {
+        height: 44px;
+        font-size: 16px;
+        line-height: 44px;
+      }
+      @include when(block) {
+        display: block;
+        width: 100%;
+      }
+      @include when(loading) {
+        .cms-icon {
+          position: relative;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          text-align: center;
+          line-height: 24px;
+          animation: loading 1s infinite linear;
+        }
+        @keyframes loading {
+          0% {
+            transform: rotate(0);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+      @include when(shape-default) {
+        border-radius: 4px;
+      }
+      @include when(shape-rounded) {
+        border-radius: 1000px;
+      }
+      @include when(shape-rectangular) {
+        border-radius: 0;
+      }
+    }
+  }
+}
