@@ -1,10 +1,18 @@
 /* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
-  font-family: "iconfont"; /* Project id 3592685 */
-  src: url("//at.alicdn.com/t/c/font_3592685_f14ge7m632w.woff2?t=1741577116166")
-      format("woff2"),
-    url("//at.alicdn.com/t/c/font_3592685_f14ge7m632w.woff?t=1741577116166")
-      format("woff"),
-    url("//at.alicdn.com/t/c/font_3592685_f14ge7m632w.ttf?t=1741577116166")
-      format("truetype");
+  font-family: "iconfont"; /* project id 2291310 */
+  src: url("//at.alicdn.com/t/font_2291310_nuybney3x5s.eot");
+  src: url("//at.alicdn.com/t/font_2291310_nuybney3x5s.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_2291310_nuybney3x5s.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_2291310_nuybney3x5s.woff") format("woff"),
+    url("//at.alicdn.com/t/font_2291310_nuybney3x5s.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_2291310_nuybney3x5s.svg#iconfont") format("svg");
+}
+
+.cms-icon {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
