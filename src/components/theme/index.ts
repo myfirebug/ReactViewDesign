@@ -24,6 +24,10 @@ export interface IThemes {
     "--cms-divider-color": string;
     // 背景色
     "--cms-background-color": string;
+    // 白色
+    "--cms-white": string;
+    // 黑色
+    "--cms-black": string;
   };
 }
 
@@ -39,6 +43,22 @@ export const THEMES: IThemes = {
     "--cms-border-color": "#dcdee2",
     "--cms-divider-color": "#e8eaec",
     "--cms-background-color": "#f8f8f9",
+    "--cms-white": "#fff",
+    "--cms-black": "#000",
+  },
+  defaultDark: {
+    "--cms-color-primary": "#2d8cf0",
+    "--cms-color-success": "#19be6b",
+    "--cms-color-warning": "#ff9900",
+    "--cms-color-danger": "#ed4014",
+    "--cms-text-color-title": "#f8f8f9",
+    "--cms-text-color-content": "#e8eaec",
+    "--cms-color-disabled": "#dcdee2",
+    "--cms-border-color": "#c5c8ce",
+    "--cms-divider-color": "#515a6e",
+    "--cms-background-color": "#17233d",
+    "--cms-white": "#fff",
+    "--cms-black": "#000",
   },
 };
 // 判断浏览器是否支持cssVar
