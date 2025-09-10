@@ -11,7 +11,7 @@ module.exports = {
     },
   },
   // 继承其他规则
-  extends: ["react-app"],
+  extends: ["react-app", "plugin:storybook/recommended"],
   rules: {
     "react-hooks/rules-of-hooks": 0,
   },
